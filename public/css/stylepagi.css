@@ -1,0 +1,56 @@
+
+.card {
+    height: 100%; /* Esto asegura que todas las tarjetas tengan el mismo alto */
+    width: 80%;
+}
+.card-img-top {
+    height: 300px; /* Altura fija para las imágenes */
+}
+.titulo-grande {
+    font-size: 2.5em; /* Aumenta el tamaño de la fuente */
+}
+.btn-same-size {
+    width: 120px; /* Establece un ancho fijo para los botones */
+}
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    /* Otros estilos que desees aplicar */
+}
+
+.pagination span {
+    margin: 0 5px;
+    /* Estilos para botones desactivados */
+}
+/* Estilos para la paginación */
+.pagination {
+    display: flex;
+    justify-content: center; /* Centra los elementos de paginación */
+    list-style: none; /* Elimina el estilo de lista */
+    padding: 0;
+}
+
+.pagination a, .pagination span {
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: 1px solid #ddd; /* Borde para los elementos de paginación */
+    color: #007bff; /* Color del texto */
+    text-decoration: none;
+    background-color: #f8f9fa; /* Color de fondo */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.pagination a:hover {
+    background-color: #e9ecef; /* Color de fondo al pasar el ratón */
+}
+
+.pagination span {
+    color: #6c757d; /* Color del texto para elementos desactivados */
+    cursor: not-allowed; /* Cursor para elementos desactivados */
+    background-color: #e9ecef; /* Color de fondo para elementos desactivados */
+}
+
+.pagination a.active {
+    background-color: #007bff; /* Color de fondo para el elemento activo */
+    color: white; /* Color de texto para el elemento activo */
+}

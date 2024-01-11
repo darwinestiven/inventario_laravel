@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nomProd',50);
             $table->integer('categoria');
             $table->string('detProd',50);
+            $table->string('imagen')->nullable();
             $table->primary('idProd');
             $table->foreign('categoria')->references('idCat')->on('categoria');
             $table->timestamps();

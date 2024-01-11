@@ -8,6 +8,8 @@ use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\ProveedoresController;
 use App\Http\Controllers\FacturacionesController;
+use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\ExistenciasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -103,6 +105,54 @@ Route::get('/proveedores/eliminar/{id}', [ProveedoresController::class, 'elimina
 
 ################################################################
 
+// Rutas Productos
+Route::get('/productos/listado', [ProductosController::class, 'index']
+)->middleware(['auth', 'verified'])->name('listado_productos');
+
+Route::get('/productos/registrar', [ProductosController::class, 'form_registro']
+)->middleware(['auth', 'verified'])->name('form_registro_producto');
+
+Route::post('/productos/registrar', [ProductosController::class, 'registrar']
+)->middleware(['auth', 'verified'])->name('registrar_producto');
+
+Route::get('/productos/editar/{id}', [ProductosController::class, 'form_edicion']
+)->middleware(['auth', 'verified'])->name('editar_prod');
+
+Route::post('/productos/editar/{id}', [ProductosController::class, 'editar']
+)->middleware(['auth', 'verified'])->name('editar_producto');
+
+Route::get('/productos/eliminar/{id}', [ProductosController::class, 'eliminar']
+)->middleware(['auth', 'verified'])->name('eliminar_producto');
+
+##########
+// Dentro de web.php
+Route::get('/productos/{id}/precio', [FacturacionesController::class, 'getPrecioVenta']);
+
+
+
+#####################################################################################
+
+// Rutas Existencias
+Route::get('/existencias/listado', [ExistenciasController::class, 'index']
+)->middleware(['auth', 'verified'])->name('listado_existencias');
+
+Route::get('/existencias/registrar', [ExistenciasController::class, 'form_registro']
+)->middleware(['auth', 'verified'])->name('form_registro_existencia');
+
+Route::post('/existencias/registrar', [ExistenciasController::class, 'registrar']
+)->middleware(['auth', 'verified'])->name('registrar_existencia');
+
+Route::get('/existencias/editar/{id}', [ExistenciasController::class, 'form_edicion']
+)->middleware(['auth', 'verified'])->name('editar_exis');
+
+Route::post('/existencias/editar/{id}', [ExistenciasController::class, 'editar']
+)->middleware(['auth', 'verified'])->name('editar_existencia');
+
+Route::get('/existencias/eliminar/{id}', [ExistenciasController::class, 'eliminar']
+)->middleware(['auth', 'verified'])->name('eliminar_existencia');
+
+############################################################################
+
 //Rutas Facturaciones
 Route::get('/facturaciones/listado', [FacturacionesController::class,'index' ] 
 )->middleware(['auth', 'verified'])->name('listado_facturaciones');
@@ -112,6 +162,9 @@ Route::get('/facturaciones/registrar', [FacturacionesController::class, 'form_re
 
 Route::post('/facturaciones/registrar', [FacturacionesController::class, 'registrar']
 )->middleware(['auth', 'verified'])->name('registrar_fac');
+
+Route::post('/facturaciones/registrarpro', [FacturacionesController::class, 'registrarPro']
+)->middleware(['auth', 'verified'])->name('registrar_fac_pro');
 
 
 

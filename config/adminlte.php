@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Academica</b>',
+    'logo' => '<b>Inventario</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -325,25 +325,25 @@ return [
         
         [
             'text'    => 'Gestión de Productos',
-            'icon'    => 'fas fa-fw fa-share',
+            'icon'    => 'fas fa-fw fa-bars',
             'submenu' => [
 
                 [
                     'text' => 'Productos',
-                    'url'  => '/programas/listado',
-                    'icon' => 'fas fa-fw fa-user',
+                    'url'  => '/productos/listado',
+                    'icon' => 'fas fa-fw fa-boxes',
                 ],
         
                 [
                     'text' => 'Categorías',
                     'url'  => '/categorias/listado',
-                    'icon' => 'fas fa-fw fa-user',
+                    'icon' => 'fas fa-fw fa-tags',
                 ],
         
                 [
                     'text' => 'Proveedores',
                     'url'  => '/proveedores/listado',
-                    'icon' => 'fas fa-fw fa-user',
+                    'icon' => 'fas fa-fw fa-truck',
                 ],
 
 
@@ -352,19 +352,19 @@ return [
 
         [
             'text'    => 'Gestión de Existencias',
-            'icon'    => 'fas fa-fw fa-share',
+            'icon'    => 'fas fa-fw fa-bars',
             'submenu' => [
 
                 [
                     'text' => 'Existencias',
                     'url'  => '/existencias/listado',
-                    'icon' => 'fas fa-fw fa-user',
+                    'icon' => 'fas fa-fw fa-warehouse',
                 ],
 
                 [
                     'text' => 'Facturación',
                     'url'  => '/facturaciones/listado',
-                    'icon' => 'fas fa-fw fa-user',
+                    'icon' => 'fas fa-fw fa-file-invoice',
                 ],
 
             ]

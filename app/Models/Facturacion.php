@@ -9,7 +9,8 @@ class Facturacion extends Model
 {
     protected $table = 'facturacion';
     protected $primaryKey = 'idFac';
-    protected $fillable = ['cliente', 'idFac', 'fecFac', 'montoToFac'];
+    protected $fillable = ['cliente', 'idFac', 'fecFac', 'montoToFac', 'categoria', 'producto', 'cantidad', 'precio', 'total'];
+
     public $timestamps = 'true';
 
     public function client(){

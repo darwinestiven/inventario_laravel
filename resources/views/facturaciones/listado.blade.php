@@ -28,7 +28,7 @@
 @endif
 
 <div style="text-align: right;">
-    <a href="/facturaciones/registrar" type="button" class="btn btn-success">Registrar</a>
+    <a href="/facturaciones/registrar" type="button" class="btn btn-success">Nueva Factura</a>
 </div>
 <br>
 

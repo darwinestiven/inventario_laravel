@@ -22,7 +22,7 @@
             <input type="number" class="form-control" id="montoTo_Fac" name="montoTo_Fac" value='{{$factu->montoToFac}}'>
         </div>
         <div class="mb-3">
-            <label for="select_cliente" class="form-label">Seleccionar Facultad</label>
+            <label for="select_cliente" class="form-label">Seleccionar Cliente</label>
             <select class="form-control" id="select_cliente" name="id_Cli">
                 @foreach($clientes as $cliente)
                     <option value="{{ $cliente->idCli }}" 

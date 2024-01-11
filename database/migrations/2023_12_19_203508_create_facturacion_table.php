@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('facturacion', function (Blueprint $table) {
             $table->integer('idFac');
             $table->date('fecFac');
-            $table->float('montoToFac',10,2);
+            $table->float('montoToFac',10,2)->nullable();
             $table->integer('cliente');
             $table->primary('idFac');
             $table->foreign('cliente')->references('idCli')->on('clientes');
